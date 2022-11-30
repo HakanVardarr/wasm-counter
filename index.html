@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            height: 50%;
+            width: 50%;
+            margin: auto auto;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        }
+
+        body {
+            font-family: 'Roboto', sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        #num {
+            font-size: 5rem;
+
+        }
+
+        #increament-button {
+            padding: 1rem;
+            font-size: 2rem;
+            width: 30%;
+            border-radius: 5px;
+            border: none;
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            transition: .5s all ease;
+            background-color: rgb(116, 75, 116);
+            color: #fff
+        }
+
+        #increament-button:hover {
+            transform: scale(1.2);
+        }
+    </style>
+</head>
+
+<body>
+    <script type="module">
+        import init from "./pkg/hello_wasm.js";
+        init().then(() => { });
+    </script>
+    <div class="container">
+        <h1 id="num">0</h1>
+        <button id="increament-button">+</button>
+    </div>
+</body>
+
+</html>
